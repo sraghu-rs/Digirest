@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Digital Bank Fund Tranfer Form</title>
+
+ 
+<link href="css/style.css" rel="stylesheet">
+
+   <script src="js/angular.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <script src="js/paybank.js"></script>
+
+</head>
+
+<body data-ng-controller="myController" data-ng-app="myModule">
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div><b>DigitalBank</b></div>
+		</div>
+		<br>
+		<div class="login">
+		<form>
+		
+				<input type="text" placeholder="username" data-ng-model="userform.username" id="username" name="username"><br>
+				<input type="password" data-ng-model="userform.password" id="password" placeholder="password" name="password"><br>
+				<input type="text" data-ng-model="userform.accno" id="accno" placeholder="Account No" name="accno"><br>
+				<input type="text" data-ng-model="userform.amount" id="amount" placeholder="amount" name="amount"><br>
+			
+				 <input type="submit"  data-ng-click="submit_userform()" value="Pay">
+		</form>
+		</div>
+
+  
+
+</body>
+
+</html>

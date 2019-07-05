@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.digirest.bean.AccountBean" table = "account">
+      
+      <meta attribute = "class-description">
+         This class contains the User detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "account_number" column = "account_number" type = "int"/>
+       <property name = "current_balance" column = "current_balance" type = "double"/>
+      <property name = "date_closed" column = "date_closed" type = "date"/>
+      <property name = "date_opened" column = "date_opened" type = "date"/>
+         <property name = "interest_rate" column = "interest_rate" type = "double"/>
+      <property name = "name" column = "name" type = "string"/>
+      
+      <property name = "opening_balance" column = "opening_balance" type = "double"/>
+       <property name = "payment_amount" column = "payment_amount" type = "double"/>
+      <property name = "payment_due" column = "payment_due" type = "date"/>
+      <property name = "payment_term" column = "payment_term" type = "int"/>
+         <property name = "account_standing_id" column = "account_standing_id" type = "int"/>
+      
+      <property name = "account_type_id" column = "account_type_id" type = "int"/>
+      
+       <property name = "coowner_id" column = "coowner_id" type = "int"/>
+        <property name = "owner_id" column = "owner_id" type = "int"/>
+         <property name = "ownership_type_id" column = "ownership_type_id" type = "int"/>
+         
+      
+      
+      
+      
+      
+   </class>
+</hibernate-mapping>
