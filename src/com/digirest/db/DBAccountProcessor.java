@@ -1,4 +1,4 @@
-package com.digirest.db;
+package com.digibank.db;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -6,8 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.digirest.bean.AccountBean;
-import com.digirest.bean.RequestAccountBean;
+import com.digibank.bean.AccountBean;
+import com.digibank.bean.RequestAccountBean;
 
 
 public class DBAccountProcessor {
@@ -24,7 +24,7 @@ public class DBAccountProcessor {
 	      double amount = accBean.getWithdraw_amount();
 	      try {
 	         tx = session.beginTransaction();
-	         String hsql="from AccountBean where account_number="+accNo + " and owner_id=(select id from UsersBean where username='"+accBean.getUsername() + "')";
+	         String hsql="from AccountBean where account_number="+accNo + " and owner_id=(select id from users where username='"+accBean.getUsername() + "')";
 	         Query query=session.createQuery(hsql);
 	         
 	         accountBean = (AccountBean)query.getSingleResult();
