@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "com.digirest.bean.AccountTransactionBean" table = "account_transaction">
+      
+      <meta attribute = "class-description">
+         This class contains the User detail. 
+      </meta>
+      
+      <id name = "id" type = "int" column = "id">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "amount" column = "amount" type = "double"/>
+       <property name = "description" column = "description" type = "string"/>
+      <property name = "running_balance" column = "running_balance" type = "double"/>
+      <property name = "transaction_date" column = "transaction_date" type = "date"/>
+         <property name = "transaction_number" column = "transaction_number" type = "int"/>
+      <property name = "account_id" column = "account_id" type = "int"/>
+      <property name = "transaction_state_id" column = "transaction_state_id" type = "int"/>
+       <property name = "transaction_type_id" column = "transaction_type_id" type = "int"/>
+         
+      
+      
+      
+      
+      
+   </class>
+</hibernate-mapping>

@@ -30,6 +30,7 @@
 		<!-- List of XML mapping files -->
 			<mapping resource="/resources/accountbean.hbm.xml" />
 				<mapping resource="/resources/usersbean.hbm.xml" />
+				<mapping resource="/resources/accounttransactionbean.hbm.xml"/>
 		
 	</session-factory>
 </hibernate-configuration>
