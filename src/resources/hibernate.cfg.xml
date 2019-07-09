@@ -16,7 +16,7 @@
 
 		<property name="hibernate.connection.url">
 
-			jdbc:mysql://localhost:3306/digitalbank
+			jdbc:mysql://localhost:3306/digitalbank?serverTimezone=UTC
 		</property>
 
 		<property name="hibernate.connection.username">
