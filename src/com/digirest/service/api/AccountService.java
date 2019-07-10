@@ -10,7 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.digirest.bean.AccountBean;
+import com.digirest.bean.AccountUserBean;
 import com.digirest.bean.RequestAccountBean;
 import com.digirest.db.DBAccountProcessor;
 
@@ -35,6 +35,25 @@ public class AccountService {
 			String successmsg = accCtrl.withdrawMoney(reqAccBean);
 			successmsg= successmsg + " To Go back to PetClinic:<a href=" + urlpath + "> Click here </a>";
 	
+			return Response.status(200).entity(successmsg).build();	
+		}
+		
+		@POST
+		@Path("/onlinejsonpay")
+		@PermitAll
+		@Produces(MediaType.APPLICATION_JSON)
+	    @Consumes(MediaType.APPLICATION_JSON)
+		public Response onlinejsonpayment(AccountUserBean accUserBean) 
+		{
+			System.out.println("Request received from :"+ accUserBean.getUsername());
+			RequestAccountBean reqAccBean =new RequestAccountBean();
+			reqAccBean.setUsername(accUserBean.getUsername());
+			reqAccBean.setPassword(accUserBean.getPassword());
+			reqAccBean.setWithdraw_amount(accUserBean.getAmount());
+			reqAccBean.setAccount_number(accUserBean.getAccno());
+			DBAccountProcessor accCtrl=new DBAccountProcessor();
+			String successmsg = accCtrl.withdrawMoney(reqAccBean);
+			successmsg= successmsg + " To Go back to PetClinic:<a href=" + accUserBean.getUrlpath() + "> Click here </a>";
 			return Response.status(200).entity(successmsg).build();	
 		}
 	}
