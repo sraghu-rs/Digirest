@@ -7,8 +7,9 @@
 	mvn clean package    
 ```
 
+Deploy the generated war file into Tomcat container.
 
-You can then access Digirest here: [http://localhost:8080/digirest/index.html](http://localhost:8080/)
+You can then access Digirest here: [http://localhost:8080/](http://localhost:8080/)
 
 
 ## Database configuration
