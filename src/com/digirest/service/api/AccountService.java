@@ -30,7 +30,7 @@ public class AccountService {
 			reqAccBean.setUsername(username);
 			reqAccBean.setPassword(password);
 			reqAccBean.setWithdraw_amount(Double.parseDouble(amount));
-			reqAccBean.setAccount_number(Integer.parseInt(account_number));
+			reqAccBean.setAccount_number(Long.parseLong(account_number));
 			DBAccountProcessor accCtrl=new DBAccountProcessor();
 			String successmsg = accCtrl.withdrawMoney(reqAccBean);
 			successmsg= successmsg + " To Go back to PetClinic:<a href=" + urlpath + "> Click here </a>";
@@ -53,7 +53,7 @@ public class AccountService {
 			reqAccBean.setAccount_number(accUserBean.getAccno());
 			DBAccountProcessor accCtrl=new DBAccountProcessor();
 			String successmsg = accCtrl.withdrawMoney(reqAccBean);
-			successmsg= successmsg + " To Go back to PetClinic:<a href=" + accUserBean.getUrlpath() + "> Click here </a>";
+			successmsg= successmsg + " To Go back to PetClinic:<a href=" + accUserBean.getUrlPath() + "> Click here </a>";
 			return Response.status(200).entity(successmsg).build();	
 		}
 	}

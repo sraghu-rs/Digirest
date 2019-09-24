@@ -6,7 +6,7 @@ public class AccountBean {
 
 	
 		public Integer id;
-		public Integer account_number;
+		public Long account_number;
 		public Double current_balance;
 		public Date date_closed;
 		public Date date_opened;
@@ -27,10 +27,10 @@ public class AccountBean {
 		public void setId(Integer id) {
 			this.id = id;
 		}
-		public Integer getAccount_number() {
+		public Long getAccount_number() {
 			return account_number;
 		}
-		public void setAccount_number(Integer account_number) {
+		public void setAccount_number(Long account_number) {
 			this.account_number = account_number;
 		}
 		public Double getCurrent_balance() {

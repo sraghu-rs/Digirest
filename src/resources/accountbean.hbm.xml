@@ -15,7 +15,7 @@
          <generator class="native"/>
       </id>
       
-      <property name = "account_number" column = "account_number" type = "int"/>
+      <property name = "account_number" column = "account_number" type = "long"/>
        <property name = "current_balance" column = "current_balance" type = "double"/>
       <property name = "date_closed" column = "date_closed" type = "date"/>
       <property name = "date_opened" column = "date_opened" type = "date"/>

@@ -5,7 +5,7 @@ package com.digirest.bean;
 public class RequestAccountBean {
 	
 	
-		public Integer account_number;
+		public Long account_number;
 		public Double withdraw_amount;
 		public String username;
 		public String password;
@@ -22,10 +22,11 @@ public class RequestAccountBean {
 		public void setPassword(String password) {
 			this.password = password;
 		}
-		public Integer getAccount_number() {
+		
+		public Long getAccount_number() {
 			return account_number;
 		}
-		public void setAccount_number(Integer account_number) {
+		public void setAccount_number(Long account_number) {
 			this.account_number = account_number;
 		}
 		public Double getWithdraw_amount() {

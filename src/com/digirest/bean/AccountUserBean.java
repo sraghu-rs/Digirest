@@ -4,9 +4,9 @@ public class AccountUserBean {
 	
 	public String username;
 	public String password;
-	public int accno;
+	public Long accno;
 	public String bank;
-	public String urlpath;
+	public String urlPath;
 	public double amount;
 	public String getUsername() {
 		return username;
@@ -20,10 +20,11 @@ public class AccountUserBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getAccno() {
+	
+	public Long getAccno() {
 		return accno;
 	}
-	public void setAccno(int accno) {
+	public void setAccno(Long accno) {
 		this.accno = accno;
 	}
 	public String getBank() {
@@ -32,11 +33,11 @@ public class AccountUserBean {
 	public void setBank(String bank) {
 		this.bank = bank;
 	}
-	public String getUrlpath() {
-		return urlpath;
+	public String getUrlPath() {
+		return urlPath;
 	}
-	public void setUrlpath(String urlpath) {
-		this.urlpath = urlpath;
+	public void setUrlPath(String urlPath) {
+		this.urlPath = urlPath;
 	}
 	public double getAmount() {
 		return amount;

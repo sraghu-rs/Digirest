@@ -23,7 +23,8 @@ public class DBAccountProcessor {
 	     AccountBean accountBean =new AccountBean();
 
 	     
-	      int accNo=accBean.getAccount_number();
+	      Long accNo=accBean.getAccount_number();
+	      
 	      double amount = accBean.getWithdraw_amount();
 	      String retmsg="";
 	      try {
