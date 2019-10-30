@@ -2,6 +2,7 @@ package com.digirest.db;
 
 import java.util.Date;
 
+
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -59,12 +60,14 @@ public class DBAccountProcessor {
 	    
 	        // Get the max no of ID from Transaction table
 	        // Enter into Transaction table:
+			
+			
 	         AccountTransactionBean actransbean= new AccountTransactionBean();
 	         amount=amount * -1;
 	         actransbean.setAmount(amount);
 	         actransbean.setDescription("PetClinic: Online Payment");
 	         actransbean.setRunning_balance(currBalance);
-		     actransbean.setTransaction_date(new Date());
+		     actransbean.setTransaction_date(new Date());			
 	         //Generate RAndom number;
 	         Double transaction_number = Math.random()* 100000;
 	         actransbean.setTransaction_number(transaction_number.intValue());
@@ -72,6 +75,7 @@ public class DBAccountProcessor {
 	         actransbean.setAccount_id(accountBean.getId());
 	         actransbean.setTransaction_state_id(transaction_state_id);
 	         actransbean.setTransaction_type_id(transaction_type_id);
+			 actransbean.setTransaction_category_id(65);
 	         session.save(actransbean);
 	         System.out.println("Transaction Saved");
 	         tx.commit();

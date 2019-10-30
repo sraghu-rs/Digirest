@@ -61,11 +61,19 @@ public class AccountTransactionBean {
 	public void setTransaction_type_id(int transaction_type_id) {
 		this.transaction_type_id = transaction_type_id;
 	}
+	
+	public int getTransaction_category_id() {
+		return transaction_category_id;
+	}
+	public void setTransaction_category_id(int transaction_category_id) {
+		this.transaction_category_id = transaction_category_id;
+	}
 	public double running_balance;
 	public Date transaction_date;
 	public int transaction_number;
 	public int account_id;
 	public int transaction_state_id;
 	public int transaction_type_id;
+	public int transaction_category_id;
 	
 }
