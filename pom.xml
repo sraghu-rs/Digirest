@@ -277,6 +277,7 @@
   
   <build>
     <sourceDirectory>src</sourceDirectory>
+	<finalName>digirest</finalName>
 	<resources>
 		<resource>
 		<directory>src</directory>
